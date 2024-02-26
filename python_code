@@ -1,0 +1,21 @@
+# tax_calculator.py
+
+def calculate_tax(income):
+    """Calculate tax based on a flat rate of 1%."""
+    tax_rate = 0.01
+    tax_amount = income * tax_rate
+    return tax_amount
+
+if __name__ == "__main__":
+    try:
+        # Get user input for income
+        income = float(input("Enter the employee's income: $"))
+
+        # Calculate tax
+        tax_result = calculate_tax(income)
+
+        # Display the result
+        print(f"Tax amount for an income of ${income}: ${tax_result}")
+
+    except ValueError:
+        print("Please enter a valid numeric value for income.")
